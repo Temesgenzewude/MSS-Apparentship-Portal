@@ -1,12 +1,12 @@
 
-Micro Sun and Solutions PLC Apparentship Learning Portal
-Overview
+Micro Sun and Solutions PLC Apparentship Learning Portal:
+Overview:
 The Micro Sun and Solutions PLC Apparentship Learning Portal is a web application that allows students to access useful course materials and learn them based on their tech stack of interest. It also enables students to apply for an apparentship position at Micro Sun and Solutions PLC.
 
 This project is being developed by three teams: a backend team, an admin panel team, and a frontend team. Each team has its own specific tasks and responsibilities, but all teams must follow some basic guidelines to ensure that their work integrates smoothly with the work of the other teams.
 
-Guidelines
-Branching Strategy
+Guidelines:
+Branching Strategy:
 We will be using the Git branching model called Gitflow. This model provides a clear separation of responsibilities between different branches and helps to keep the codebase organized.
 
 The main branch will be considered the production-ready branch, and all new features, bug fixes, and other changes should be developed on feature branches derived from the main branch. Once a feature branch is complete, it will be merged back into the main branch through a pull request.
@@ -53,8 +53,8 @@ Conventions:
    Add a label when creating a pull request
 
 
-Code Style
+Code Style:
 All code should follow a consistent code style to ensure readability and maintainability. Each team should decide on a code style that works best for them and document it in a style guide.
 
-Conclusion
+Conclusion:
 Following these guidelines will help ensure that our project is well-organized, easy to maintain, and that each team's work integrates smoothly with the work of the other teams.
