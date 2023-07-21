@@ -21,7 +21,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 bg-white ${scrolling ? 'shadow-md' : ''} py-4 px-6 md:px-12 lg:px-16 flex items-center justify-between transition-shadow`}>
+    <nav className={`fixed top-0 left-0 right-0 bg-white ${scrolling ? 'shadow-md' : ''} py-2 px-4 md:px-12 lg:px-16 flex items-center justify-between transition-shadow`}>
       <div className="flex items-center">
         <img src={logo} alt="mss logo" className="w-20 mr-2" />
       </div>
