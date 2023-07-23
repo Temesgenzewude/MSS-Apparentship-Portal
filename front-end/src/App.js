@@ -20,13 +20,6 @@ function App() {
         The role of air traffic management systems and procedures in optimizing fuel efficiency has been explored by researchers such as Li et al. [9] and Krajzewicz et al. [10]. Dynamic airspace configuration, optimized sequencing and spacing of aircraft, and collaborative decision-making processes have been proposed to minimize delays and fuel consumption. However, challenges remain in implementing these concepts in a complex and highly regulated aviation environment.
 
         Policy and regulatory analysis is essential for driving sustainable practices in the aviation industry. Studies by Lu et al. [11] and MacFarlane et al. [12] have assessed the effectiveness of current policies and regulations in promoting fuel efficiency and emissions reduction. However, there is a need for continuous evaluation and improvement of these measures, considering technological advancements and evolving environmental goals.
-
-        In conclusion, while existing research has laid the groundwork for optimizing aircraft routing and flight planning for fuel efficiency and emissions reduction, there are several areas that require further investigation. This proposed research aims to address these gaps by leveraging AI and ML technologies to develop comprehensive and integrated solutions. By building upon the findings of previous studies and incorporating innovative methodologies, this research seeks to contribute to the advancement of sustainable aviation practices and provide practical guidance for industry stakeholders and policymakers.
-
-        References:
-        [1] Smith, A., Johnson, B., & Brown, C. (2017). Route Optimization Algorithms for Fuel Efficiency in Aircraft Routing. Transportation Research Part A: Policy and Practice, 101, 125-140.
-        [2] Nguyen, T., Lee, S., & Park, J. (2019). Integrated Optimization of Aircraft Routing and Scheduling Considering Fuel Consumption and Emissions. Journal of Air Transport Management, 75, 86-98.
-        [3] Johnson, M., Thompson, R., & Davis, L. (2018). Continuous Descent Approaches for Fuel Burn Reduction: A Review.
       </p>
     </div>
   );
