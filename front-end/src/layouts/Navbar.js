@@ -41,6 +41,7 @@ const Navbar = () => {
         <div
           className="relative"
           onMouseEnter={() => setShowDropdown(true)}
+          onMouseLeave={() => setShowDropdown(false)}
         >
           <button
             className={`flex items-center text-blue-800 hover:text-indigo-500 focus:outline-none`}
@@ -65,7 +66,7 @@ const Navbar = () => {
           </button>
           {showDropdown && (
             <div
-              className={`absolute bg-white w-40 mt-2 py-2 px-4 shadow-md rounded left-0 transition-opacity duration-400 ${showDropdown ? 'opacity-100' : 'opacity-0'
+              className={`absolute bg-white w-40 mt-1 py-2 px-4 shadow-md rounded left-0 transition-opacity duration-400 ${showDropdown ? 'opacity-100' : 'opacity-0'
                 }`}
               onMouseLeave={() => setShowDropdown(false)}
               onMouseEnter={() => setShowDropdown(true)}
