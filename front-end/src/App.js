@@ -1,8 +1,9 @@
 import './App.css';
+import Navbar from './layouts/Navbar';
 
 function App() {
   return (
-    <div>
+    <div className='mt-20'>
       <p className="w-80 text-center m-auto text-blue-700 bg-cyan-400">
         Literature Review
 
