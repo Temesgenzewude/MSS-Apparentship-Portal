@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Navbar from '../layouts/Navbar';
 
 const Layout = ({ children }) => {
   useEffect(() => {
@@ -8,7 +7,6 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-white transition-all">
-      <Navbar />
       <div>{children}</div>
     </div>
   );
