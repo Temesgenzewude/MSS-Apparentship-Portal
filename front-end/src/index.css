@@ -9,3 +9,7 @@ body, div, nav {
   background-color: #F7F5FA;
   color: #15406B;
 }
+
+html {
+  scroll-behavior: smooth;
+}

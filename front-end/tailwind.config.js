@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       colors: {
         customPurple: 'rgba(156, 77, 244, 1)',
+        customCyan: 'rgba(183, 241, 214, 0.39)',
+        customGreen: 'rgba(80, 244, 77, 1)',
+        customBlue: 'rgba(0, 10, 46, 1)',
       },
       animation: {
         'linearLoad': 'linearLoadAnimation 1.4s',

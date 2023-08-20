@@ -17,7 +17,7 @@ function HomeLandingPage() {
                     </p>
                     <button className='rounded-md shadow-lg transition-shadow duration-500 hover:shadow-xl p-2  ml-0 mb-4 text-white bg-customPurple'
                     >
-                        <a href='#'>Apply for Internship</a>
+                        <a href='#internship'>Apply for Internship</a>
                     </button>
                 </div>
                 <div className='basis-1/2'>

@@ -39,7 +39,7 @@ const Navbar = () => {
       </div>
       <div className={`hidden md:flex space-x-4 ml-auto ${showMenu ? 'block' : 'hidden'}`}>
         <a href="#" className="hover:text-blue-800">Home</a>
-        <a href="#" className="hover:text-blue-800">Courses</a>
+        <a href="#courses" className="hover:text-blue-800">Courses</a>
         <div
           className="relative"
           onMouseEnter={() => setShowDropdown(true)}
@@ -92,8 +92,8 @@ const Navbar = () => {
             </div>
           )}
         </div>
-        <a href="#" className="hover:text-blue-800">About us</a>
-        <a href="#" className="hover:text-blue-800">Contact</a>
+        <a href="https://www.mssethiopia.com/about.php" className="hover:text-blue-800">About us</a>
+        <a href="#contact" className="hover:text-blue-800">Contact</a>
       </div>
       <div className="hidden md:flex items-center space-x-4 lg:space-x-6 ml-4 lg:ml-14">
         <button className={`transition-colors duration-300 ease-out-in bg-white hover:bg-blue-500 hover:text-white text-blue-500 border border-blue-500 py-2 px-3 rounded`}>
