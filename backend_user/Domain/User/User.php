@@ -7,7 +7,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-
+enum InternShipStatus:int
+{
+    case PENDING = 0;
+    case ACTIVE = 1;
+    case FINISHED = 2;
+}
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -18,9 +23,18 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'UserName',
+        'Email',
+        'Password',
+        'FirstName',
+        'LastName',
+        'SchoolId',
+        'CategoryId',
+        'ProfilePicture',
+        'CVId',
+        'PhoneNumber',
+        'Batch',
+        'Status',
     ];
 
     /**
@@ -29,7 +43,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
+        'Password',
         'remember_token',
     ];
 
@@ -40,6 +54,27 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'password' => 'hashed',
+        'Password' => 'hashed',
+        'Status' => InternShipStatus:: class
     ];
+
+    public function school()
+    {
+        return $this->belongsTo(School::class);
+    }
+
+    public function category()
+    {
+        return $this->hasOne(Category::class);
+    }
+
+    public function courses()
+    {
+        return $this->hasMany(Course::class);
+    }
+
+    public function getProfilePictureUrlAttribute()
+    {
+        return asset('images/' . $this->ProfilePicture);
+    }
 }
