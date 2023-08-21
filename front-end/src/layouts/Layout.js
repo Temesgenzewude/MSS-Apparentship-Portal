@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white transition-all">
+    <div className="bg-white transition-all">
       <div>{children}</div>
     </div>
   );

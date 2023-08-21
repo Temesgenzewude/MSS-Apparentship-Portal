@@ -5,8 +5,13 @@ import Layout from '../layouts/Layout';
 import CourseRecommendation from './CourseRecommendation';
 import InternshipCard from './InternshipCard';
 import TestimonialSlider from './TestimonialSlider';
-import SubscriptionCard from './SubscriptionCard';
 import Footer from '../layouts/Footer';
+import Img1 from '../images/thumb1.jpg';
+import Img2 from '../images/thumb2.jpg';
+import Img3 from '../images/thumb3.jpg';
+import Img4 from '../images/thumb4.jpg';
+
+
 
 function HomePage() {
 
@@ -27,7 +32,7 @@ function HomePage() {
             rating: 4.5,
             totalTime: '2h 30m',
             peopleFinished: 50,
-            imageUrl: '../images/thumb1.jpg',
+            imageUrl: Img1,
         },
         {
             id: 2,
@@ -36,7 +41,7 @@ function HomePage() {
             rating: 4.5,
             totalTime: '2h 30m',
             peopleFinished: 50,
-            imageUrl: '../images/thumb2.jpg',
+            imageUrl: Img2,
         },
         {
             id: 3,
@@ -45,7 +50,7 @@ function HomePage() {
             rating: 4.5,
             totalTime: '2h 30m',
             peopleFinished: 50,
-            imageUrl: '../images/thumb3.jpg',
+            imageUrl: Img3,
         },
         {
             id: 4,
@@ -54,17 +59,17 @@ function HomePage() {
             rating: 4.5,
             totalTime: '2h 30m',
             peopleFinished: 50,
-            imageUrl: '../images/thumb4.jpg',
+            imageUrl: Img4,
         },
     ];
 
     return (
-        <>
+        <div>
             <Layout>
                 <Navbar />
                 <HomeLandingPage />
             </Layout>
-            <section id='courses' className="md:px-12 lg:px-16 mx-auto pt-24 px-4">
+            <section id='courses' className="md:px-12 lg:px-16 mx-auto pt-4 px-4">
                 <div className='mb-6 flex items-center flex-col'>
                     <h1 className="text-3xl font-semibold text-customBlue mb-4 text-center">
                         Welcome to Our Course Recommendations
@@ -95,7 +100,7 @@ function HomePage() {
             </div>
             <TestimonialSlider />
             <Footer />
-        </>
+        </div>
     )
 }
 
