@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import TestimonialCard from './TestimonialCard';
+import Img from '../images/sila2.jpg';
 
 const TestimonialSlider = () => {
     const [testimonials, setTestimonials] = useState([
         {
             id: 1,
-            imageSrc: '././images/sila2.jpg',
+            imageSrc: Img,
             quote: "Tailwind CSS is the only framework that I've seen scale on large teams.",
             author: 'Sarah Dayan',
             role: 'Staff Engineer, Algolia',
         },
         {
             id: 2,
-            imageSrc: '././images/sila2.jpg',
+            imageSrc: Img,
             quote: 'I love how Tailwind CSS makes it easy to create stunning designs.',
             author: 'John Doe',
             role: 'Frontend Developer',
         },
         {
             id: 3,
-            imageSrc: '../images/sila2.jpg',
+            imageSrc: Img,
             quote: 'As a UI/UX designer, Tailwind CSS has simplified my workflow.',
             author: 'Jane Smith',
             role: 'UI/UX Designer',

@@ -69,25 +69,25 @@ const Navbar = () => {
           </button>
           {showDropdown && (
             <div
-              className={`absolute bg-white w-40 mt-1 py-2 px-4 shadow-md rounded left-0 transition-opacity duration-400 ${showDropdown ? 'opacity-100' : 'opacity-0'
+              className={`absolute bg-white w-auto py-2 px-4 shadow-lg rounded transition-opacity duration-400 ${showDropdown ? 'opacity-100' : 'opacity-0'
                 }`}
               onMouseLeave={() => setShowDropdown(false)}
               onMouseEnter={() => setShowDropdown(true)}
+              style={{ width: showDropdown ? 'auto' : '0' }}
             >
-              {/* Add your dropdown items here */}
-              <a href="#" className="block mb-2 hover:text-blue-800">
+              <a href="#" className="block mb-2 hover:text-blue-900">
                 Dropdown Item 1
               </a>
-              <a href="#" className="block mb-2 hover:text-blue-800">
+              <a href="#" className="block mb-2 hover:text-blue-900">
                 Dropdown Item 2
               </a>
-              <a href="#" className="block mb-2 hover:text-blue-800">
+              <a href="#" className="block mb-2 hover:text-blue-900">
                 Dropdown Item 3
               </a>
-              <a href="#" className="block mb-2 hover:text-blue-800">
+              <a href="#" className="block mb-2 hover:text-blue-900">
                 Dropdown Item 4
               </a>
-              <a href="#" className="block mb-2 hover:text-blue-800">
+              <a href="#" className="block mb-2 hover:text-blue-900">
                 Dropdown Item 5
               </a>
             </div>
@@ -97,12 +97,12 @@ const Navbar = () => {
         <a href="#contact" className="hover:text-blue-800">Contact</a>
       </div>
       <div className="hidden md:flex items-center space-x-4 lg:space-x-6 ml-4 lg:ml-14">
-        <Link to="/login" className={`transition-colors duration-300 ease-in-out bg-white hover:bg-blue-500 hover:text-white text-blue-500 border border-blue-500 py-2 px-3 rounded`}>
+        <a href="/login" className={`transition-colors duration-300 ease-in-out bg-white hover:bg-blue-500 hover:text-white text-blue-500 border border-blue-500 py-2 px-3 rounded`}>
           Log In
-        </Link>
-        <Link to="/signup" className={`transition-colors duration-300 ease-in-out bg-blue-500 hover:bg-white hover:text-blue-500  text-white border border-blue-500 py-2 px-3 rounded`}>
+        </a>
+        <a href="/signup" className={`transition-colors duration-300 ease-in-out bg-blue-500 hover:bg-white hover:text-blue-500  text-white border border-blue-500 py-2 px-3 rounded`}>
           Sign Up
-        </Link>
+        </a>
       </div>
 
       <div className="md:hidden">
