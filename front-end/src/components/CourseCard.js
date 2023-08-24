@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const CourseRecommendation = ({ course }) => {
+const CourseCard = ({ course }) => {
     if (!course) {
         return <div>Loading...</div>;
     }
@@ -10,8 +10,8 @@ const CourseRecommendation = ({ course }) => {
     const { id, title, description, rating, totalTime, peopleFinished, imageUrl } = course;
 
     return (
-        <div to={`/courses`} className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-            <a href={`/courses`}>
+        <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <a href={`/courses/${id}`}>
                 <img src={imageUrl} alt={title} className="w-full h-40 object-cover" />
             </a>
             <div className="p-4 flex flex-col flex-grow">
@@ -41,4 +41,4 @@ const CourseRecommendation = ({ course }) => {
     );
 };
 
-export default CourseRecommendation;
+export default CourseCard;

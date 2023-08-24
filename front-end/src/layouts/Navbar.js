@@ -39,7 +39,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className={`hidden md:flex space-x-4 ml-auto ${showMenu ? 'block' : 'hidden'}`}>
-        <a href="#" className="hover:text-blue-800">Home</a>
+        <a href="/" className="hover:text-blue-800">Home</a>
         <a href="#courses" className="hover:text-blue-800">Courses</a>
         <div
           className="relative"

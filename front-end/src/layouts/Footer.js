@@ -34,9 +34,9 @@ const Footer = () => {
                 Programs
               </h2>
               <ul className="text-gray-300 space-y-2">
-                <li>Web Development</li>
-                <li>Data Science</li>
-                <li>UI/UX Design</li>
+                <li><a href='/web-development'>Web Development</a></li>
+                <li><a href='/data-science'>Data Science</a></li>
+                <li><a href='/ui-ux-design'>UI/UX Design</a></li>
               </ul>
             </div>
             <div id='contact' className="text-white bg-customBlue">
@@ -50,7 +50,7 @@ const Footer = () => {
                 <p>+251-911-20-26-11</p>
                 <p>+251-1-15-50-90-40/41</p>
                 <p>+971 55 555 4906</p>
-                <p>Ethiopia, Addis Ababa, <br/>
+                <p>Ethiopia, Addis Ababa, <br />
                   Bole road in front of Shewa Supermarket</p>
               </address>
             </div>

@@ -5,6 +5,8 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import HomePage from './components/HomePage';
 import LoginPage from './components/LoginPage';
 import SignUpPage from './components/SignupPage';
+import CourseListPage from './components/CourseListPage';
+import CourseDetailsPage from './components/CourseDetailsPage';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignUpPage />} />
+            <Route path='/courses' element={<CourseListPage />} />
+            <Route path="/courses/:id" component={<CourseDetailsPage />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
