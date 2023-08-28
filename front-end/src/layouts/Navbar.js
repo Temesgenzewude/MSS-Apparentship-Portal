@@ -42,12 +42,11 @@ const Navbar = () => {
         <a href="/" className="hover:text-blue-800">Home</a>
         <a href="#courses" className="hover:text-blue-800">Courses</a>
         <div
-          className="relative"
           onMouseEnter={() => setShowDropdown(true)}
           onMouseLeave={() => setShowDropdown(false)}
         >
           <button
-            className={`flex items-center text-blue-800 hover:text-indigo-500 focus:outline-none`}
+            className={`flex items-center  hover:text-blue-800 focus:outline-none`}
             onClick={toggleDropdown}
           >
             Categories
@@ -69,26 +68,26 @@ const Navbar = () => {
           </button>
           {showDropdown && (
             <div
-              className={`absolute bg-white w-auto py-2 px-4 shadow-lg rounded transition-opacity duration-400 ${showDropdown ? 'opacity-100' : 'opacity-0'
+              className={`absolute w-auto bg-white py-4  shadow-xl rounded-md transition-opacity duration-500 ${showDropdown ? 'opacity-100' : 'opacity-0'
                 }`}
               onMouseLeave={() => setShowDropdown(false)}
               onMouseEnter={() => setShowDropdown(true)}
               style={{ width: showDropdown ? 'auto' : '0' }}
             >
-              <a href="#" className="block mb-2 hover:text-blue-900">
-                Dropdown Item 1
+              <a href="#" className="block px-12 mb-2 hover:shadow-md">
+                Frontend development
               </a>
-              <a href="#" className="block mb-2 hover:text-blue-900">
-                Dropdown Item 2
+              <a href="#" className="block px-12 mb-2 hover:shadow-md">
+                Backend development
               </a>
-              <a href="#" className="block mb-2 hover:text-blue-900">
-                Dropdown Item 3
+              <a href="#" className="block px-12 mb-2 hover:shadow-md">
+                Mobile app
               </a>
-              <a href="#" className="block mb-2 hover:text-blue-900">
-                Dropdown Item 4
+              <a href="#" className="block px-12 mb-2 hover:shadow-md">
+                Graphics design
               </a>
-              <a href="#" className="block mb-2 hover:text-blue-900">
-                Dropdown Item 5
+              <a href="#" className="block px-12 mb-2 hover:shadow-md">
+                UI/UX design
               </a>
             </div>
           )}
@@ -96,16 +95,64 @@ const Navbar = () => {
         <a href="https://www.mssethiopia.com/about.php" className="hover:text-blue-800">About us</a>
         <a href="#contact" className="hover:text-blue-800">Contact</a>
       </div>
-      <div className="hidden md:flex items-center space-x-4 lg:space-x-6 ml-4 lg:ml-14">
-        <a href="/login" className={`transition-colors duration-300 ease-in-out bg-white hover:bg-blue-500 hover:text-white text-blue-500 border border-blue-500 py-2 px-3 rounded`}>
+      <div className="md:flex items-center space-x-4 lg:space-x-6 ml-4 lg:ml-14">
+        <a href="/login" className={`transition-colors duration-300 ease-in-out bg-white hover:bg-blue-500 hover:text-white text-blue-500 border border-blue-500 py-1 px-2 rounded`}>
           Log In
         </a>
-        <a href="/signup" className={`transition-colors duration-300 ease-in-out bg-blue-500 hover:bg-white hover:text-blue-500  text-white border border-blue-500 py-2 px-3 rounded`}>
+        <a href="/signup" className={`transition-colors duration-300 ease-in-out bg-blue-500 hover:bg-white hover:text-blue-500  text-white border border-blue-500 py-1 px-2 rounded`}>
           Sign Up
         </a>
       </div>
-
       <div className="md:hidden">
+        {showMenu && (
+          <div className={'absolute top-14 right-6 w-auto bg-white shadow-md rounded-md py-2 px-6'}>
+            <a href="/" className="block mb-2 px-2 rounded-md hover:bg-cyan-100">Home</a>
+            <a href="#courses" className="block mb-2 px-2 rounded-md hover:bg-cyan-100">Courses</a>
+            <div className="mb-2">
+              <button
+                className={`flex items-center px-2 rounded-md bg-white hover:bg-cyan-100 focus:outline-none w-full`}
+                onClick={toggleDropdown}
+              >
+                Categories
+                <svg
+                  className={`w-4 h-4 ml-1 transition-transform duration-500 ${showMenu ? 'rotate-90' : 'rotate-0'}`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
+              {showDropdown && (
+                <div
+                  className={`bg-white py-4 px-6 transition-opacity duration-500 ${showDropdown ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  style={{ width: showDropdown ? 'auto' : '0' }}
+                >
+                  <a href="#" className="block px-2 mt-2 rounded hover:bg-cyan-100">
+                    Frontend development
+                  </a>
+                  <a href="#" className="block px-2 mt-2 rounded hover:bg-cyan-100">
+                    Backend development
+                  </a>
+                  <a href="#" className="block px-2 mt-2 rounded hover:bg-cyan-100">
+                    Mobile app
+                  </a>
+                  <a href="#" className="block px-2 mt-2 rounded hover:bg-cyan-100">
+                    Graphics design
+                  </a>
+                  <a href="#" className="block px-2 mt-2 rounded hover:bg-cyan-100">
+                    UI/UX design
+                  </a>
+                </div>
+              )}
+            </div>
+            <a href="https://www.mssethiopia.com/about.php" className="block mb-2 px-2 rounded-md hover:bg-cyan-100">About us</a>
+            <a href="#contact" className="block mb-2 px-2 rounded-md hover:bg-cyan-100">Contact</a>
+          </div>
+        )}
         <button onClick={toggleMenu} className='p-2'>
           {showMenu ? (
             <svg className='w-6 h-6 fill-current text-blue-800' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.293 5.293l-11 11c-.39.39-1.024.39-1.414 0l-11-11c-.391-.391-.391-1.024 0-1.414s1.024-.391 1.414 0l10.293 10.293 10.293-10.293c.39-.391 1.024-.391 1.414 0s.391 1.023 0 1.414z" /></svg>
