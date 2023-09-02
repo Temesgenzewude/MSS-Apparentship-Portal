@@ -126,7 +126,7 @@ const SignUpPage = () => {
               </div>
               <div>
                 <label htmlFor="batch" className="block font-medium mb-2">
-                  Batch
+                  Year
                 </label>
                 <select
                   id="batch"
@@ -135,7 +135,7 @@ const SignUpPage = () => {
                   onChange={handleChange}
                   className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
                 >
-                  <option value="">Select Batch</option>
+                  <option value="">Select year</option>
                   <option value="1">1st</option>
                   <option value="2">2nd</option>
                   <option value="3">3rd</option>
@@ -155,10 +155,10 @@ const SignUpPage = () => {
                   />
                 )}
               </div>
-
+              
               <div>
                 <label htmlFor="schoolId" className="block font-medium mb-2">
-                  School ID
+                  Campus
                 </label>
                 <input
                   type="text"

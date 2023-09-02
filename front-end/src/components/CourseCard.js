@@ -11,13 +11,13 @@ const CourseCard = ({ course }) => {
 
     return (
         <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-            <a href={`/courses/${id}`}>
+            <Link to={`/courses/${id}`}>
                 <img src={imageUrl} alt={title} className="w-full h-40 object-cover" />
-            </a>
+            </Link>
             <div className="p-4 flex flex-col flex-grow">
-                <a href={`/courses/${id}`}>
+                <Link to={`/courses/${id}`}>
                     <h2 className="text-xl font-semibold text-blue-800">{title}</h2>
-                </a>
+                </Link>
                 <p className="text-gray-600 mt-2 flex-grow">{description}</p>
                 <div className="flex items-center mt-4">
                     <div className="flex items-center mr-4">

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../layouts/Navbar';
+import axios from 'axios';
 
 const sampleCourses = [
     {
@@ -61,19 +62,35 @@ const sampleCourses = [
         title: 'Advanced React Concepts',
         videoUrl: 'https://www.youtube.com/watch?v=SqcY0GlETPk',
         description: 'Master advanced concepts in React.',
-    },
-    
-    // Add more sample courses as needed
+    }
 ];
 
 const CourseDetailsPage = ({ match }) => {
     const courseId = match.params.id; // Assuming you get the course ID from the route
 
+    const [courses, setCourses] = useState([]);
     const [selectedCourse, setSelectedCourse] = useState(null);
 
     useEffect(() => {
-        setSelectedCourse(sampleCourses.find(course => course.id === parseInt(courseId, 10)));
-    }, [courseId]);
+        // Fetch course list from your Laravel backend
+        axios.get('/api/courses')
+            .then(response => {
+                setCourses(response.data);
+            })
+            .catch(error => {
+                console.error('Error fetching course list:', error);
+            });
+    }, []);
+
+    useEffect(() => {
+        if (selectedCourse === null && courses.length > 0) {
+            setSelectedCourse(courses.find(course => course.id === parseInt(courseId, 10)));
+        }
+    }, [selectedCourse, courseId, courses]);
+
+    if (courses.length === 0) {
+        return <div>Loading...</div>;
+    }
 
     return (
         <>
@@ -93,7 +110,7 @@ const CourseDetailsPage = ({ match }) => {
                 <div className="w-1/3">
                     <h2>Course List</h2>
                     <ul>
-                        {sampleCourses.map(course => (
+                        {courses.map(course => (
                             <li key={course.id}>
                                 <button
                                     onClick={() => setSelectedCourse(course)}
