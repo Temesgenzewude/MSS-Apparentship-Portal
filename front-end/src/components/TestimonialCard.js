@@ -7,8 +7,6 @@ const TestimonialCard = ({ imageSrc, quote, author, role }) => {
         className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
         src={imageSrc}
         alt="internees image"
-        width="384"
-        height="512"
       />
       <div className="pt-6 md:p-8 bg-white rounded-md text-center md:text-left space-y-4">
         <blockquote>

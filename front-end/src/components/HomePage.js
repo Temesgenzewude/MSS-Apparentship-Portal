@@ -2,7 +2,6 @@
 import HomeLandingPage from './HomeLandingPage';
 import Navbar from '../layouts/Navbar';
 import Layout from '../layouts/Layout';
-import CourseRecommendation from './CourseRecommendation';
 import InternshipCard from './InternshipCard';
 import TestimonialSlider from './TestimonialSlider';
 import Footer from '../layouts/Footer';
@@ -10,8 +9,47 @@ import Img1 from '../images/thumb1.jpg';
 import Img2 from '../images/thumb2.jpg';
 import Img3 from '../images/thumb3.jpg';
 import Img4 from '../images/thumb4.jpg';
+import CourseCard from './CourseCard';
+import CourseList from './CourseList';
 
-
+const courses = [
+    {
+        id: 1,
+        title: 'Course 1',
+        description: 'This is the first course description',
+        rating: 4.5,
+        totalTime: '2h 30m',
+        peopleFinished: 50,
+        imageUrl: Img1,
+    },
+    {
+        id: 2,
+        title: 'Course 1',
+        description: 'This is the first course description',
+        rating: 4.5,
+        totalTime: '2h 30m',
+        peopleFinished: 50,
+        imageUrl: Img2,
+    },
+    {
+        id: 3,
+        title: 'Course 1',
+        description: 'This is the first course description',
+        rating: 4.5,
+        totalTime: '2h 30m',
+        peopleFinished: 50,
+        imageUrl: Img3,
+    },
+    {
+        id: 4,
+        title: 'Course 4',
+        description: 'This is the first course description',
+        rating: 4.5,
+        totalTime: '2h 30m',
+        peopleFinished: 50,
+        imageUrl: Img4,
+    },
+];
 
 function HomePage() {
 
@@ -24,44 +62,7 @@ function HomePage() {
     //         .catch((error) => console.error('Error fetching course data:', error));
     // }, []);
 
-    const courses = [
-        {
-            id: 1,
-            title: 'Course 1',
-            description: 'This is the first course description',
-            rating: 4.5,
-            totalTime: '2h 30m',
-            peopleFinished: 50,
-            imageUrl: Img1,
-        },
-        {
-            id: 2,
-            title: 'Course 1',
-            description: 'This is the first course description',
-            rating: 4.5,
-            totalTime: '2h 30m',
-            peopleFinished: 50,
-            imageUrl: Img2,
-        },
-        {
-            id: 3,
-            title: 'Course 1',
-            description: 'This is the first course description',
-            rating: 4.5,
-            totalTime: '2h 30m',
-            peopleFinished: 50,
-            imageUrl: Img3,
-        },
-        {
-            id: 4,
-            title: 'Course 4',
-            description: 'This is the first course description',
-            rating: 4.5,
-            totalTime: '2h 30m',
-            peopleFinished: 50,
-            imageUrl: Img4,
-        },
-    ];
+
 
     return (
         <div>
@@ -69,7 +70,7 @@ function HomePage() {
                 <Navbar />
                 <HomeLandingPage />
             </Layout>
-            <section id='courses' className="md:px-12 lg:px-16 mx-auto pt-4 px-4">
+            <section id='courses' className="md:px-12 lg:px-16 mx-auto p-4">
                 <div className='mb-6 flex items-center flex-col'>
                     <h1 className="text-3xl font-semibold text-customBlue mb-4 text-center">
                         Welcome to Our Course Recommendations
@@ -86,7 +87,9 @@ function HomePage() {
                 <div className="flex flex-wrap justify-center">
                     {courses.map((course) => (
                         <div key={course.id} className="w-1/2 lg:w-1/4 px-2 mb-8">
-                            <CourseRecommendation course={course} />
+                            <a to={`/courses/${course.id}`}>
+                                <CourseCard course={course} />
+                            </a>
                         </div>
                     ))}
                 </div>
@@ -104,4 +107,5 @@ function HomePage() {
     )
 }
 
+export { courses };
 export default HomePage;
