@@ -7,13 +7,9 @@ const SignUpPage = () => {
   const [formData, setFormData] = useState({
     userName: '',
     email: '',
-    password: '',
     firstName: '',
     lastName: '',
-    phoneNumber: '',
-    batch: '',
-    schoolId: '',
-    categoryId: '',
+    password: ''
   });
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -69,6 +65,8 @@ const SignUpPage = () => {
                   name="userName"
                   value={formData.userName}
                   onChange={handleChange}
+                  placeholder='User Name'
+                  required
                   className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
                 />
               </div>
@@ -82,6 +80,8 @@ const SignUpPage = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
+                  placeholder='Email'
+                  required
                   className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
                 />
               </div>
@@ -95,6 +95,8 @@ const SignUpPage = () => {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
+                  placeholder='First Name'
+                  required
                   className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
                 />
               </div>
@@ -108,64 +110,8 @@ const SignUpPage = () => {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              <div>
-                <label htmlFor="phoneNumber" className="block font-medium mb-2">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phoneNumber"
-                  name="phoneNumber"
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
-                />
-              </div>
-              <div>
-                <label htmlFor="batch" className="block font-medium mb-2">
-                  Year
-                </label>
-                <select
-                  id="batch"
-                  name="batch"
-                  value={formData.batch}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
-                >
-                  <option value="">Select year</option>
-                  <option value="1">1st</option>
-                  <option value="2">2nd</option>
-                  <option value="3">3rd</option>
-                  <option value="4">4th</option>
-                  <option value="5">5th</option>
-                  <option value="other">Other</option>
-                </select>
-                {formData.batch === "other" && (
-                  <input
-                    type="text"
-                    id="otherBatch"
-                    name="otherBatch"
-                    value={formData.otherBatch}
-                    onChange={handleChange}
-                    placeholder="Enter batch"
-                    className="w-full mt-2 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
-                  />
-                )}
-              </div>
-              
-              <div>
-                <label htmlFor="schoolId" className="block font-medium mb-2">
-                  Campus
-                </label>
-                <input
-                  type="text"
-                  id="schoolId"
-                  name="schoolId"
-                  value={formData.schoolId}
-                  onChange={handleChange}
+                  placeholder='Last Name'
+                  required
                   className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
                 />
               </div>
@@ -179,6 +125,7 @@ const SignUpPage = () => {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
+                  placeholder='********'
                   className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
                 />
               </div>

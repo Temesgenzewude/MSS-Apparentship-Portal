@@ -7,6 +7,7 @@ import LoginPage from './components/LoginPage';
 import SignUpPage from './components/SignupPage';
 import CourseListPage from './components/CourseListPage';
 import CourseDetailsPage from './components/CourseDetailsPage';
+import InternshipForm from './components/InternshipForm';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/signup" element={<SignUpPage />} />
             <Route path='/courses' element={<CourseListPage />} />
             <Route path="/courses/:id" component={<CourseDetailsPage />} />
+            <Route path='/internshipForm' element={<InternshipForm />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
