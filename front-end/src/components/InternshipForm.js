@@ -5,7 +5,8 @@ import Footer from '../layouts/Footer';
 
 const InternshipForm = () => {
     const [formData, setFormData] = useState({
-        fullName: '',
+        firstName: '',
+        lastName: '',
         email: '',
         phoneNumber: '',
         year: '',
@@ -55,16 +56,31 @@ const InternshipForm = () => {
                     <form onSubmit={handleSubmit}>
                         <div className="grid grid-cols- gap-4">
                             <div>
-                                <label htmlFor="fullName" className="block font-medium mb-2">
-                                    Full Name
+                                <label htmlFor="firstName" className="block font-medium mb-2">
+                                    First Name
                                 </label>
                                 <input
                                     type="text"
-                                    id="fullName"
-                                    name="fullName"
-                                    value={formData.fullName}
+                                    id="firstName"
+                                    name="firstName"
+                                    value={formData.firstName}
                                     onChange={handleChange}
-                                    placeholder='Full Name'
+                                    placeholder='First Name'
+                                    required
+                                    className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="lastName" className="block font-medium mb-2">
+                                    Last Name
+                                </label>
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    name="lastName"
+                                    value={formData.lastName}
+                                    onChange={handleChange}
+                                    placeholder='Last Name'
                                     required
                                     className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
                                 />
@@ -137,7 +153,7 @@ const InternshipForm = () => {
                             </div>
                             <div>
                                 <label htmlFor="type" className="block font-medium mb-2">
-                                    Type of work
+                                    Category
                                 </label>
                                 <select
                                     id="type"
@@ -147,7 +163,7 @@ const InternshipForm = () => {
                                     required
                                     className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
                                 >
-                                    <option value="">Select work</option>
+                                    <option value="">Select category</option>
                                     <option value="">Sales</option>
                                     <option value="1">Front-End developer</option>
                                     <option value="2">Back-End developer</option>
