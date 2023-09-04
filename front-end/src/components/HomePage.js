@@ -96,7 +96,7 @@ function HomePage() {
                 <div id='internship' className="flex justify-center items-center md:px-24 lg:px-32 mx-auto pt-24 px-8">
                     <InternshipCard
                         title="Software Developer Internship"
-                        description="Work on exciting projects and gain valuable experience in software development."
+                        description="Work on exciting projects and gain valuable experience in software development, graphics design, maintenance, and sales."
                         available={true}
                     />
                 </div>
