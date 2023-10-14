@@ -18,9 +18,8 @@ const LoginPage = () => {
                 password
             });
 
-            // Check if login was successful (customize this according to your Laravel setup)
+            // Check if login was successful
             if (response.data.success) {
-                // Redirect to dashboard or desired page
                 window.location.href = '/dashboard';
             } else {
                 setErrorMessage('Invalid email or password');

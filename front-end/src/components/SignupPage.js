@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import Footer from '../layouts/Footer';
 
 const SignUpPage = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [formData, setFormData] = useState({
     userName: '',
     email: '',
@@ -11,8 +13,6 @@ const SignUpPage = () => {
     lastName: '',
     password: ''
   });
-  const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;

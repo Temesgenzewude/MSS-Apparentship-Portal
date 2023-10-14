@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import Footer from '../layouts/Footer';
 
 const InternshipForm = () => {
+    const [isLoading, setIsLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -13,8 +15,6 @@ const InternshipForm = () => {
         campus: '',
         type: '',
     });
-    const [isLoading, setIsLoading] = useState(false);
-    const [errorMessage, setErrorMessage] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
